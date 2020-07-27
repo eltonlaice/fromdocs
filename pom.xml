@@ -9,13 +9,26 @@
   <version>1.0-SNAPSHOT</version>
 
   <name>fromdocs</name>
-  <!-- FIXME change it to the project's website -->
+  <description>Java package to get structured data from ID, Passport, driving license and NUIT</description>
   <url>https://fromdocs.eltonlaice.com</url>
+  <inceptionYear>2002</inceptionYear>
+  <organization>
+      <name>Elton Laice</name>
+      <url>https://eltonlaice.com</url>
+  </organization>
+
+  <developers>
+      <developer>
+          <id>eltonlaice</id>
+          <name>Elton Tomas Laice</name>
+          <email>me@eltonlaice.com</email>
+      </developer>
+  </developers>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
 
   <dependencies>
