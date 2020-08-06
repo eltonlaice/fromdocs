@@ -38,6 +38,13 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+    
+    <!-- https://mvnrepository.com/artifact/net.sourceforge.tess4j/tess4j -->
+	<dependency>
+	    <groupId>net.sourceforge.tess4j</groupId>
+	    <artifactId>tess4j</artifactId>
+	    <version>4.5.1</version>
+	</dependency>
   </dependencies>
 
   <build>
