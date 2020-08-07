@@ -14,6 +14,8 @@ public class DocumentReader {
 	
 	private Document document;
 	
+	private String data; 
+	
 	/**
 	 * 
 	 * @param file
@@ -38,13 +40,13 @@ public class DocumentReader {
     	this.tesseract.setOcrEngineMode(1);
     	
     	try {
-			String data = tesseract.doOCR(image);
+			this.data = tesseract.doOCR(image);
 	    	if(this.type.equalsIgnoreCase(Config.NUIT)) {
-	    		documentProcess.processNuit(data);
+	    		documentProcess.processNuit(this.data);
 	    	}if (this.type.equalsIgnoreCase(Config.BI) || this.type.equalsIgnoreCase(Config.ID)) {
-	    		documentProcess.processId(data);
+	    		documentProcess.processId(this.data);
 			}else if (this.type.equalsIgnoreCase(Config.PASSPORT)) {
-				documentProcess.processPassport(data);
+				documentProcess.processPassport(this.data);
 			}else {
 			}
 		} catch (Exception e) {
@@ -90,5 +92,9 @@ public class DocumentReader {
 	 */
 	public void setFile(String file) {
 		this.file = file;
+	}
+
+	public String getData() {
+		return data;
 	}
 }
