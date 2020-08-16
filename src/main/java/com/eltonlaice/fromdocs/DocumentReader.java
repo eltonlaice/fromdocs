@@ -42,7 +42,7 @@ public class DocumentReader {
     	try {
 			this.data = tesseract.doOCR(image);
 	    	if(this.type.equalsIgnoreCase(Config.NUIT)) {
-	    		documentProcess.processNuit(this.data);
+	    		this.document = documentProcess.processNuit(this.data);
 	    	}if (this.type.equalsIgnoreCase(Config.BI) || this.type.equalsIgnoreCase(Config.ID)) {
 	    		documentProcess.processId(this.data);
 			}else if (this.type.equalsIgnoreCase(Config.PASSPORT)) {

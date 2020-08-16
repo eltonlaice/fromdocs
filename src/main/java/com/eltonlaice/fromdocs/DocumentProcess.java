@@ -1,9 +1,14 @@
 package com.eltonlaice.fromdocs;
 
+import com.eltonlaice.fromdocs.services.NuitService;
+
 public class DocumentProcess {
 	public Nuit processNuit(String data) {
+		NuitService nuitService = new NuitService(data);
 		Nuit nuit = new Nuit();
-		System.out.println("NUIT");
+		nuit.setNumber(nuitService.getNumber());
+		nuit.setLastName(nuitService.getLastName());
+		nuit.setGivenNames(nuitService.getGivenNames());
 		return nuit;
 	}
 

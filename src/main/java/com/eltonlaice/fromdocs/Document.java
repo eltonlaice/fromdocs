@@ -109,4 +109,46 @@ public class Document {
 	public String getPlaceIssue() {
 		return placeIssue;
 	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
+	public void setNumber(String number) {
+		this.number = number;
+	}
+
+	public void setGivenNames(String givenNames) {
+		this.givenNames = givenNames;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public void setBirthdate(LocalDate birthdate) {
+		this.birthdate = birthdate;
+	}
+
+	public void setPlaceBirth(String placeBirth) {
+		this.placeBirth = placeBirth;
+	}
+
+	public void setSex(char sex) {
+		this.sex = sex;
+	}
+
+	public void setDateIssue(LocalDate dateIssue) {
+		this.dateIssue = dateIssue;
+	}
+
+	public void setDateExpiry(LocalDate dateExpiry) {
+		this.dateExpiry = dateExpiry;
+	}
+
+	public void setPlaceIssue(String placeIssue) {
+		this.placeIssue = placeIssue;
+	}
+	
+	
 }
