@@ -2,6 +2,16 @@
 
 Java package to get structured data from ID, Passport, driving license and NUIT. Fromdocs supports images and PDF
 
+```java
+		DocumentReader reader  = new DocumentReader("/path/docfile.pdf", "NUIT");
+		Document document = reader.getDocument();
+		String number = document.getNumber();
+		String lastName = document.getLastName();
+		String givenNames = document.getGivenNames();
+		LocalDate birthdate = document.getBirthdate();
+		String placeBirth = document.getPlaceBirth();
+		LocalDate dateIssue = document.getDateIssue();
+```
 
 ## Credits
 
