@@ -1,5 +1,7 @@
 package com.eltonlaice.fromdocs.services;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -68,4 +70,45 @@ public class NuitService {
 		return givenNames;
 	}
 
+	public LocalDate getBirthdate() { 
+		ArrayList<String> dates = new ArrayList<String>(); 
+		for (int i = 0; i < this.data_array_lines.length; i++) {
+			String pattern = "[0-9]{2}(—|-)[0-9]{2}(—|-)[0-9]{4}";
+			Pattern r = Pattern.compile(pattern);
+			Matcher m = r.matcher(this.data_array_lines[i]);
+			while (m.find()) {
+				dates.add(m.group());
+			}	
+		}
+		if (dates.size() > 0) {
+			String [] date_array = dates.get(0).split("(—|-)");
+			LocalDate birthdate = LocalDate.of(
+					Integer.parseInt(date_array[2]), 
+					Integer.parseInt(date_array[1]), 
+					Integer.parseInt(date_array[0]));
+			return birthdate;
+		}
+		return null;
+	}
+
+	public LocalDate getDateIssue() {
+		ArrayList<String> dates = new ArrayList<String>(); 
+		for (int i = 0; i < this.data_array_lines.length; i++) {
+			String pattern = "[0-9]{2}(—|-)[0-9]{2}(—|-)[0-9]{4}";
+			Pattern r = Pattern.compile(pattern);
+			Matcher m = r.matcher(this.data_array_lines[i]);
+			while (m.find()) {
+				dates.add(m.group());
+			}	
+		}
+		if (dates.size() > 1) {
+			String [] date_array = dates.get(1).split("(—|-)");
+			LocalDate dateIssue = LocalDate.of(
+					Integer.parseInt(date_array[2]), 
+					Integer.parseInt(date_array[1]), 
+					Integer.parseInt(date_array[0]));
+			return dateIssue;
+		}
+		return null;
+	}
 }
