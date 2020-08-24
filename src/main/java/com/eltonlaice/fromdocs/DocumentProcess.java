@@ -9,6 +9,8 @@ public class DocumentProcess {
 		nuit.setNumber(nuitService.getNumber());
 		nuit.setLastName(nuitService.getLastName());
 		nuit.setGivenNames(nuitService.getGivenNames());
+		nuit.setBirthdate(nuitService.getBirthdate());
+		nuit.setDateIssue(nuitService.getDateIssue());
 		return nuit;
 	}
 
