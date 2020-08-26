@@ -1,5 +1,6 @@
 package com.eltonlaice.fromdocs;
 
+import com.eltonlaice.fromdocs.services.IdService;
 import com.eltonlaice.fromdocs.services.NuitService;
 
 public class DocumentProcess {
@@ -15,8 +16,12 @@ public class DocumentProcess {
 	}
 
 	public Document processId(String data) {
-		System.out.println("ID");
+		IdService idService = new IdService(data);
 		Document document = new Document();
+		document.setNumber(idService.getNumber());
+		document.setLastName(idService.getLastName());
+		document.setGivenNames(idService.getGivenNames());
+		document.setBirthdate(idService.getBirthdate());
 		return document;
 	}
 
