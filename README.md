@@ -39,6 +39,8 @@ In order to install FromDocs using Maven you have to update your project's POM.x
 
 ### Manual Installation
 
+If for some reason you can't use a dependency manager like Maven or Gradle, you can download a JAR from [releases page](releases) and include it in classpath of your project.
+
 ## Contributing
 
 ## Authors
