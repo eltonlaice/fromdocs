@@ -1,8 +1,12 @@
 # Fromdocs for Java
 
-Java package to get structured data from ID, Passport, driving license and NUIT. Fromdocs supports images and PDF
+Fromdocs is a library that allows extracting identification data from digital copies of some identification documents emited in Mozambique. The extracted data can be used to automate the completion of electronic forms and, with that the process becomes faster and less error prone.
 
-## Getting Started
+Currently the set of documents supported by FromDocs include ID, NUIT, Passport and Driving license. The copies can be presented in PDF, JPG or PNG file formats.
+
+## Features
+
+## Usage
 
 ```java
 DocumentReader reader  = new DocumentReader("/path/docfile.pdf", "NUIT");
@@ -15,6 +19,14 @@ String placeBirth = document.getPlaceBirth();
 LocalDate dateIssue = document.getDateIssue();
 ```
 
+## Prerequisites
+
+## Installation
+
+## Contributing
+
+## Authors
+
 ## Credits
 
 - [Elton Tomás Laice](https://github.com/eltonlaice)
@@ -22,4 +34,10 @@ LocalDate dateIssue = document.getDateIssue();
 
 ## License
 
-Apache License, Version 2.0. Please see [License File](LICENSE.md) for more information.
+Copyright 2020 Elton Laice
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
