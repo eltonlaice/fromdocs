@@ -23,6 +23,22 @@ LocalDate dateIssue = document.getDateIssue();
 
 ## Installation
 
+### Using Maven
+
+In order to install FromDocs using Maven you have to update your project's POM.xml to include the following snippet:
+
+```xml
+<dependency>
+    <groupId>com.eltonlaice.fromdocs</groupId>
+    <artifactId>fromdocs</artifactId>
+    <version>1.0-SNAPSHOT</version>
+</dependency>
+```
+
+### Using Gradle
+
+### Manual Installation
+
 ## Contributing
 
 ## Authors
