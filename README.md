@@ -4,8 +4,6 @@ Fromdocs is a library that allows extracting identification data from digital co
 
 Currently the set of documents supported by FromDocs include ID, NUIT, Passport and Driving license. The copies can be presented in PDF, JPG or PNG file formats.
 
-## Features
-
 ## Usage
 
 In order to use this library you should first import **DocumentReader** class from its package, you can proceed as instructed in the following snippet:
