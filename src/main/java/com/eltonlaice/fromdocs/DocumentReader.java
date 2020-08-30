@@ -6,7 +6,7 @@ import net.sourceforge.tess4j.Tesseract;
 import net.sourceforge.tess4j.TesseractException;
 
 public class DocumentReader {
-	private String type;
+	private DocumentType type;
 	
 	private String file;
 	
@@ -21,7 +21,7 @@ public class DocumentReader {
 	 * @param file
 	 * @param type
 	 */
-	public DocumentReader(String file, String type) {
+	public DocumentReader(String file, DocumentType type) {
 		this.type = type;
 		this.file = file;
 		init();
@@ -41,11 +41,11 @@ public class DocumentReader {
     	
     	try {
 			this.data = tesseract.doOCR(image);
-	    	if(this.type.equalsIgnoreCase(Config.NUIT)) {
+	    	if(this.type == DocumentType.NUIT) {
 	    		this.document = documentProcess.processNuit(this.data);
-	    	}if (this.type.equalsIgnoreCase(Config.BI) || this.type.equalsIgnoreCase(Config.ID)) {
+	    	}if (this.type == DocumentType.BI || this.type == DocumentType.ID) {
 	    		this.document = documentProcess.processId(this.data);
-			}else if (this.type.equalsIgnoreCase(Config.PASSPORT)) {
+			}else if (this.type == DocumentType.PASSPORT) {
 				this.document = documentProcess.processPassport(this.data);
 			}else {
 			}
@@ -66,7 +66,7 @@ public class DocumentReader {
 	 * 
 	 * @return
 	 */
-	public String getType() {
+	public DocumentType getType() {
 		return type;
 	}
 
@@ -74,7 +74,7 @@ public class DocumentReader {
 	 * 
 	 * @param type
 	 */
-	public void setType(String type) {
+	public void setType(DocumentType type) {
 		this.type = type;
 	}
 
