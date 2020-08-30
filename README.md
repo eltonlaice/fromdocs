@@ -20,6 +20,7 @@ LocalDate dateIssue = document.getDateIssue();
 ```
 
 ## Prerequisites
+Before you install FromDocs you must make sure you have **Tesseract-OCR** installed in your Operating System. Feel free to browse their  [documentation page](https://tesseract-ocr.github.io/tessdoc/) in order to have installation instructions. 
 
 ## Installation
 
