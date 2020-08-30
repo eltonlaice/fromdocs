@@ -46,10 +46,11 @@ If for some reason you can't use a dependency manager like Maven or Gradle, you 
 
 ## Authors
 
+- [Elton Tomás Laice](https://github.com/eltonlaice)
+
 ## Credits
 
-- [Elton Tomás Laice](https://github.com/eltonlaice)
-- [All Contributors](../../contributors)
+- [Edson Michaque](https://github.com/edsonmichaque)
 
 ## License
 
