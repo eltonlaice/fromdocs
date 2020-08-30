@@ -8,8 +8,21 @@ Currently the set of documents supported by FromDocs include ID, NUIT, Passport 
 
 ## Usage
 
+In order to use this library you should first import **DocumentReader** class from its package, you can proceed as instructed in the following snippet:
+
+```java
+import com.eltonlaice.DocumentReader;
+```
+
+Then you should create a DocumentReader instance passing a copy of the document and its type as arguments:
+
 ```java
 DocumentReader reader  = new DocumentReader("/path/docfile.pdf", "NUIT");
+```
+
+Finally you can extract data from the document like this:
+
+```java
 Document document = reader.getDocument();
 String number = document.getNumber();
 String lastName = document.getLastName();
