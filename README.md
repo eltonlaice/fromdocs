@@ -15,7 +15,7 @@ import com.eltonlaice.DocumentReader;
 Then you should create a DocumentReader instance passing a copy of the document and its type as arguments:
 
 ```java
-DocumentReader reader  = new DocumentReader("/path/docfile.pdf", "NUIT");
+DocumentReader reader  = new DocumentReader("/path/docfile.pdf", DocumentType.BI);
 ```
 
 Finally you can extract data from the document like this:
